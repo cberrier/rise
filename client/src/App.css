@@ -129,7 +129,6 @@
 /* This fires as soon as the element enters the DOM */
 .quiz-feedback-animation-enter,
 .quiz-feedback-animation-appear {
-  /*We give the list the initial dimension of the list button*/
   width: 100%;
   max-height: 40px;
   color: transparent;

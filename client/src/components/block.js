@@ -8,8 +8,6 @@ export const Block = () => {
     const [submitted, setSubmitted] = useState(false)
     const [isCorrect, setIsCorrect] = useState(false)
 
-    console.log("K", knowledgeCheckBlock)
-
     useEffect( () => {
         const fetchData = async () => {
             await fetch("/api/knowledge-check-blocks", {

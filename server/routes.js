@@ -13,5 +13,4 @@ router.route('/getCacheValues').get(cacheCtrl.getCacheValues);
 router.route('/submit').post(quizCtrl.submitQuiz)
 router.route('/retry').post(quizCtrl.retryQuiz)
 
-//change
 module.exports = router;
