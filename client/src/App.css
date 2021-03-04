@@ -1,0 +1,251 @@
+.App {
+}
+
+.block-container {
+  margin: 2.5em auto;
+  background-color: #fff;
+  height: 75%;
+  width: 50%;
+  box-shadow: 0 0.1em 0.25em 0.1em rgb(192,192,192);
+}
+
+.question-container {
+  margin: 1em 5em;
+  text-align: left;
+  height:auto;
+  width:auto;
+  overflow:auto;
+}
+
+.quiz-container.submitted {
+  transition: color 0.25s;
+}
+
+.quiz-container.submitted::after {
+  border: black
+}
+
+.img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.question-title {
+  margin-top: 3.5em;
+  font-size: 1.1em;
+}
+
+.quiz-group {
+  display:block;
+  font-size: 1.15em;
+  padding: 0.5em 0;
+}
+
+.quiz-group:hover {
+  background-color: #F5F5F5;
+}
+
+.quiz-input, .quiz-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.quiz-input {
+  margin-left: 0.75em;
+}
+
+.quiz-label {
+  margin-left: 2.5em;
+}
+
+.quiz-container {
+  padding: 1em 0;
+  margin: 1.5em 5em;
+}
+
+.quiz-input-dot-indicator{
+  border: .1em solid #8a8c8d;
+  border-radius: 100%;
+  position: relative;
+  width: 2em;
+  height: 2em;
+}
+
+.quiz-input-dot-indicator.selected::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(49,53,55,.8);
+  border-radius: 100%;
+}
+
+.quiz-submit-container {
+  text-align: center;
+}
+
+.quiz-submit-button {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  cursor: pointer;
+  width: 50%;
+  min-width: 7.5em;
+  max-width: 12.5em;
+  height: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+  color: #fff;
+  background-color: silver;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+}
+
+.quiz-retry-button {
+  margin-top: 1em;
+}
+
+.quiz-retry-button-image:hover {
+  background-color: #F5F5F5;
+}
+
+.quiz-feedback {
+  position: relative;
+  margin: 2em auto 0.75em;
+  cursor: pointer;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  font-size: 1em;
+  color: black;
+  background: rgba(128, 128, 128, 0.1);
+  border: 2px solid transparent;
+}
+
+/* This fires as soon as the element enters the DOM */
+.quiz-feedback-animation-enter,
+.quiz-feedback-animation-appear {
+  /*We give the list the initial dimension of the list button*/
+  width: 100%;
+  max-height: 40px;
+  color: transparent;
+}
+
+/* This is where we can add the transition*/
+.quiz-feedback-animation-enter-active,
+.quiz-feedback-animation-appear-active {
+  width: 100%;
+  max-height: 200px;
+  transition: all 200ms;
+}
+
+/* fires as element leaves the DOM*/
+.quiz-feedback-animation-exit,
+.quiz-feedback-animation-exit-active {
+  color: transparent;
+  transition: 200ms;
+  opacity: 0;
+}
+
+.quiz-feedback-text {
+  position: absolute;
+  bottom: 2em;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.remove {
+  display: none;
+}
+
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.quiz-icon-container {
+  height: 32px;
+  width: 40px;
+}
+
+.quiz-icon-img {
+  background: transparent;
+}
+
+/* fires as element leaves the DOM*/
+.quiz-input-icon-animation-exit,
+.quiz-input-icon-animation-exit-active {
+  color: transparent;
+  transition: 200ms;
+  opacity: 0;
+}
+
+@media(max-width: 800px) {
+  .question-title {
+    font-size: 1.1em;
+  }
+
+  .question-container {
+    margin: 1em 2em;
+  }
+
+  .quiz-label {
+    font-size: 0.75em;
+  }
+
+  .quiz-container {
+    padding: 1em 0;
+    margin: 1.5em 4em;
+  }
+
+  .quiz-input-dot-indicator {
+    width: 1em;
+    height: 1em;
+  }
+
+  .quiz-input-dot-indicator.selected::after {
+    width: 0.5em;
+    height: 0.5em;
+  }
+}
+
+@media(max-width: 540px) {
+  .question-title {
+    font-size: 0.5em;
+  }
+
+  .question-container {
+    margin: 1em 0.5em;
+  }
+
+  .quiz-container {
+    padding: 1em 0;
+    margin: 1.5em 0.75em;
+  }
+
+  .quiz-label {
+    font-size: 0.25em;
+  }
+
+  .quiz-input-dot-indicator {
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  .quiz-input-dot-indicator.selected::after {
+    width: 0.25em;
+    height: 0.25em;
+  }
+
+  .quiz-submit-button {
+    height: 2.5em;
+    min-width: 3.5em;
+    font-size: 0.5em;
+  }
+}
